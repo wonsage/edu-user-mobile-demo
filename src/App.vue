@@ -5,6 +5,16 @@
   </div>
 </template>
 
+<script>
+import request from '@/utils/request'
+request({
+  method: 'GET',
+  url: '/front/ad/getAdList'
+})
+export default {
+}
+</script>
+
 <style lang="scss">
 .box {
   width: 100px;
