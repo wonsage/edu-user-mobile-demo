@@ -1,10 +1,17 @@
 <template>
-  <div class="user">user</div>
+  <div class="user">user
+    <layout-footer></layout-footer>
+  </div>
 </template>
 
 <script>
-export default {
+import LayoutFooter from '@/components/LayoutFooter'
 
+export default {
+  name: 'User',
+  components: {
+    LayoutFooter
+  }
 }
 </script>
 

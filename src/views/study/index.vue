@@ -1,10 +1,17 @@
 <template>
-  <div class="study">study</div>
+  <div class="study">study
+    <layout-footer></layout-footer>
+  </div>
 </template>
 
 <script>
-export default {
+import LayoutFooter from '@/components/LayoutFooter'
 
+export default {
+  name: 'Study',
+  components: {
+    LayoutFooter
+  }
 }
 </script>
 
