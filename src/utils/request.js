@@ -2,7 +2,7 @@
 import axios from 'axios'
 
 const request = axios.create({
-  baseURL: 'http://edufront.lagounews.com' // 网址基地址
+  baseURL: 'http://edufront.lagounews.com' // 请求网址基地址
 })
 
 export default request
