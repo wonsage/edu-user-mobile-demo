@@ -1,17 +1,22 @@
 <template>
   <div class="courses-content">
-    <van-swipe class="my-swipe" :autoplay="3500" indicator-color="white">
+  <!-- 轮播图 -->
+    <van-swipe class="home-swipe" :autoplay="4000" indicator-color="white">
       <van-swipe-item v-for="item in activeAdList" :key="item.id">
         <van-image :src="item.img"></van-image>
       </van-swipe-item>
     </van-swipe>
+  <!-- 课程列表 -->
+    <courses-content-list></courses-content-list>
   </div>
 </template>
 
 <script>
 import { getAllAds } from '@/services/courses'
+import CoursesContentList from './CoursesContentList.vue'
 
 export default {
+  components: { CoursesContentList },
   name: 'CoursesContent',
   data () {
     return {
@@ -38,5 +43,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.home-swipe {
+  width: 100%;
+}
+.home-swipe .van-swipe-item {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
 
+// 定位课程列表
+.courses-content-list {
+  top: 240px;
+  bottom: 50px;
+}
 </style>
